@@ -11,6 +11,10 @@
 		DBEE96622B73680D004563E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE96612B73680D004563E1 /* ContentView.swift */; };
 		DBEE96642B73680E004563E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEE96632B73680E004563E1 /* Assets.xcassets */; };
 		DBEE96672B73680E004563E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBEE96662B73680E004563E1 /* Preview Assets.xcassets */; };
+		DBEE96722B736C58004563E1 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = DBEE96712B736C58004563E1 /* SwiftyJSON */; };
+		DBEE96752B736CCA004563E1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DBEE96742B736CCA004563E1 /* SDWebImageSwiftUI */; };
+		DBEE96772B737C91004563E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE96762B737C91004563E1 /* Model.swift */; };
+		DBEE96792B737E62004563E1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEE96782B737E62004563E1 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,8 @@
 		DBEE96612B73680D004563E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DBEE96632B73680E004563E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBEE96662B73680E004563E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBEE96762B737C91004563E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DBEE96782B737E62004563E1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEE96752B736CCA004563E1 /* SDWebImageSwiftUI in Frameworks */,
+				DBEE96722B736C58004563E1 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,8 @@
 			children = (
 				DBEE965F2B73680D004563E1 /* KazRegionsSUIApp.swift */,
 				DBEE96612B73680D004563E1 /* ContentView.swift */,
+				DBEE96762B737C91004563E1 /* Model.swift */,
+				DBEE96782B737E62004563E1 /* ViewModel.swift */,
 				DBEE96632B73680E004563E1 /* Assets.xcassets */,
 				DBEE96652B73680E004563E1 /* Preview Content */,
 			);
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = KazRegionsSUI;
+			packageProductDependencies = (
+				DBEE96712B736C58004563E1 /* SwiftyJSON */,
+				DBEE96742B736CCA004563E1 /* SDWebImageSwiftUI */,
+			);
 			productName = KazRegionsSUI;
 			productReference = DBEE965C2B73680D004563E1 /* KazRegionsSUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = DBEE96532B73680D004563E1;
+			packageReferences = (
+				DBEE96702B736C58004563E1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				DBEE96732B736CCA004563E1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = DBEE965D2B73680D004563E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEE96772B737C91004563E1 /* Model.swift in Sources */,
 				DBEE96622B73680D004563E1 /* ContentView.swift in Sources */,
+				DBEE96792B737E62004563E1 /* ViewModel.swift in Sources */,
 				DBEE96602B73680D004563E1 /* KazRegionsSUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +362,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBEE96702B736C58004563E1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		DBEE96732B736CCA004563E1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBEE96712B736C58004563E1 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBEE96702B736C58004563E1 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		DBEE96742B736CCA004563E1 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBEE96732B736CCA004563E1 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBEE96542B73680D004563E1 /* Project object */;
 }
